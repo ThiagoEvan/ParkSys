@@ -1,4 +1,5 @@
 <h1>ParkSys</h1>
+<img src="https://media.discordapp.net/attachments/693980822281125928/1045046511156862978/ParkSys.png" width=200px height=200px>
 
 <h3>Sistema de gerenciamento de estacionamento</h3>
 
