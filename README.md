@@ -7,14 +7,14 @@ Entrou, Deixou, Voltou, Pagou, Levou
 
 <h3>Requisitos Funcionais</h3>
 
-- SPLASH SCREEN
-- TELA DE LOGIN E SENHA
-- BANCO DE DADOS
-- RELATÓRIO
-- ARQUIVO DE HELP /  MANUAL DE INSTRUÇÕES (AJUDA)
-- MENU EM TOPO
-- RECURSOS VISUAIS
-- PACOTE DE INSTALAÇÃO
+- [x] SPLASH SCREEN
+- [x] TELA DE LOGIN E SENHA
+- [x] BANCO DE DADOS
+- [ ] RELATÓRIO
+- [ ] ARQUIVO DE HELP /  MANUAL DE INSTRUÇÕES (AJUDA)
+- [ ] MENU EM TOPO
+- [ ] RECURSOS VISUAIS
+- [ ] PACOTE DE INSTALAÇÃO
 
 <h3>Referências</h3>
 <a href="https://www.figma.com/file/BCvQi1utvOm2X06trxg07X/projeto-de-JAVA?node-id=0%3A1" target= '_blank'>Figma para as esquemetizações de paginação</a><br>
