@@ -36,21 +36,23 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menuAjuda = new javax.swing.JMenuItem();
+        menuLogout = new javax.swing.JMenuItem();
+        menuFechar = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menuAdd = new javax.swing.JMenuItem();
+        menuEdit = new javax.swing.JMenuItem();
+        menuDel = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
+        menuCaixa = new javax.swing.JMenuItem();
+        menuExtrt = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jScrollPane1.setFont(new java.awt.Font("Calibri", 1, 21));
 
@@ -108,101 +110,101 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
         jMenu1.setText("Sistema");
         jMenu1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
-        jMenuItem5.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/help.png"))); // NOI18N
-        jMenuItem5.setText("Ajuda - Help");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        menuAjuda.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        menuAjuda.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuAjuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/help.png"))); // NOI18N
+        menuAjuda.setText("Ajuda - Help");
+        menuAjuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                menuAjudaActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem5);
+        jMenu1.add(menuAjuda);
 
-        jMenuItem8.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/log-out.png"))); // NOI18N
-        jMenuItem8.setText("Trocar de conta");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        menuLogout.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/log-out.png"))); // NOI18N
+        menuLogout.setText("Trocar de conta");
+        menuLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                menuLogoutActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem8);
+        jMenu1.add(menuLogout);
 
-        jMenuItem1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/Close ico.png"))); // NOI18N
-        jMenuItem1.setText("Fechar");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        menuFechar.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/Close ico.png"))); // NOI18N
+        menuFechar.setText("Fechar");
+        menuFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                menuFecharActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(menuFechar);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Funcionalidades");
         jMenu2.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
-        jMenuItem2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/add_car.png"))); // NOI18N
-        jMenuItem2.setText("Inserir carro");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        menuAdd.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
+        menuAdd.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/add_car.png"))); // NOI18N
+        menuAdd.setText("Inserir carro");
+        menuAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                menuAddActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+        jMenu2.add(menuAdd);
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, 0));
-        jMenuItem3.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/edit_rgs.png"))); // NOI18N
-        jMenuItem3.setText("Atualizar registro");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        menuEdit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, 0));
+        menuEdit.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/edit_rgs.png"))); // NOI18N
+        menuEdit.setText("Atualizar registro");
+        menuEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                menuEditActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenu2.add(menuEdit);
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
-        jMenuItem4.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/delete_rgs.png"))); // NOI18N
-        jMenuItem4.setText("Apagar Registro");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        menuDel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
+        menuDel.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuDel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/delete_rgs.png"))); // NOI18N
+        menuDel.setText("Apagar Registro");
+        menuDel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                menuDelActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        jMenu2.add(menuDel);
 
         jMenuBar1.add(jMenu2);
 
         jMenu4.setText("Financeiro");
         jMenu4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
-        jMenuItem6.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/pay.png"))); // NOI18N
-        jMenuItem6.setText("Caixa");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        menuCaixa.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
+        menuCaixa.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/pay.png"))); // NOI18N
+        menuCaixa.setText("Caixa");
+        menuCaixa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                menuCaixaActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem6);
+        jMenu4.add(menuCaixa);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, 0));
-        jMenuItem7.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/pay.png"))); // NOI18N
-        jMenuItem7.setText("Extrato");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        menuExtrt.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, 0));
+        menuExtrt.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        menuExtrt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/pay.png"))); // NOI18N
+        menuExtrt.setText("Extrato");
+        menuExtrt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                menuExtrtActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem7);
+        jMenu4.add(menuExtrt);
 
         jMenuBar1.add(jMenu4);
 
@@ -227,39 +229,40 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void menuFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFecharActionPerformed
         if (Model.Classes_DAO.Close_window() == 0){
             System.exit(0);
         }
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_menuFecharActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    private void menuAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAddActionPerformed
+        this.dispose();
+        new TelaAlterBD_GUI().setVisible(true);
+    }//GEN-LAST:event_menuAddActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void menuEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_menuEditActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void menuDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_menuDelActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void menuAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAjudaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_menuAjudaActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void menuCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCaixaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_menuCaixaActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_menuLogoutActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void menuExtrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuExtrtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_menuExtrtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,17 +307,17 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JMenuItem menuAdd;
+    private javax.swing.JMenuItem menuAjuda;
+    private javax.swing.JMenuItem menuCaixa;
+    private javax.swing.JMenuItem menuDel;
+    private javax.swing.JMenuItem menuEdit;
+    private javax.swing.JMenuItem menuExtrt;
+    private javax.swing.JMenuItem menuFechar;
+    private javax.swing.JMenuItem menuLogout;
     private java.util.List<view.Vagas> vagasList;
     private javax.persistence.Query vagasQuery;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
