@@ -55,18 +55,18 @@ public class TelaLogin_GUI extends javax.swing.JFrame {
             .addGap(0, 140, Short.MAX_VALUE)
         );
 
-        jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jLabel1.setText("Usuário");
 
-        jTextField1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 16)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        jTextField2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 16)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jLabel2.setText("Senha");
 
         jButton1.setBackground(new java.awt.Color(102, 0, 102));
-        jButton1.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 19)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Calibri", 0, 19)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Entrar");
         jButton1.setPreferredSize(new java.awt.Dimension(120, 35));
@@ -76,7 +76,7 @@ public class TelaLogin_GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 19)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Calibri", 0, 19)); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.setPreferredSize(new java.awt.Dimension(120, 35));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +125,7 @@ public class TelaLogin_GUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

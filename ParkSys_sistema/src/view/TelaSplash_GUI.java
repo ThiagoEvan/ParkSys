@@ -28,7 +28,7 @@ public class TelaSplash_GUI extends javax.swing.JFrame {
              
                 for(int i=0;i<101;i++){
                     try {
-                        sleep(45);
+                        sleep(1);
                         prgBar.setValue(i);
                         lblStatus.setText(String.valueOf(i)+"%");   
                     } catch (InterruptedException ex) {
@@ -68,6 +68,7 @@ public class TelaSplash_GUI extends javax.swing.JFrame {
         prgBar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 204)));
         prgBar.setBorderPainted(false);
 
+        lblStatus.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         lblStatus.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/ParkSys-Logo-PNG.png"))); // NOI18N
