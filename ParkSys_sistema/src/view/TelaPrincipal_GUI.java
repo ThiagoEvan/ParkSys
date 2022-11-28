@@ -149,7 +149,7 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
         menuAdd.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         menuAdd.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         menuAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/add_car.png"))); // NOI18N
-        menuAdd.setText("Inserir carro");
+        menuAdd.setText("Adicionar Registro");
         menuAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuAddActionPerformed(evt);
@@ -241,11 +241,13 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_menuAddActionPerformed
 
     private void menuEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuEditActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new TelaAlterBD_GUI().setVisible(true);
     }//GEN-LAST:event_menuEditActionPerformed
 
     private void menuDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDelActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new TelaAlterBD_GUI().setVisible(true);
     }//GEN-LAST:event_menuDelActionPerformed
 
     private void menuAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAjudaActionPerformed
@@ -257,7 +259,8 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_menuCaixaActionPerformed
 
     private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new TelaLogin_GUI().setVisible(true);
     }//GEN-LAST:event_menuLogoutActionPerformed
 
     private void menuExtrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuExtrtActionPerformed
