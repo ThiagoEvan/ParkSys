@@ -143,6 +143,11 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
 
         btnBuscarCupom.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnBuscarCupom.setText("BUSCAR");
+        btnBuscarCupom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarCupomActionPerformed(evt);
+            }
+        });
 
         btnDeletarCupom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/Close ico.png"))); // NOI18N
         btnDeletarCupom.addActionListener(new java.awt.event.ActionListener() {
@@ -170,6 +175,11 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jButton5.setText("ALTERAR REGISTRO");
@@ -325,6 +335,14 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
     private void txtPlacaInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlacaInsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPlacaInsActionPerformed
+
+    private void btnBuscarCupomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarCupomActionPerformed
+        Model.Classes_DAO.Busca();;
+    }//GEN-LAST:event_btnBuscarCupomActionPerformed
+
+    private void jFormattedTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
