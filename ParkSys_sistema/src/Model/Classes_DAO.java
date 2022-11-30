@@ -26,7 +26,7 @@ import static org.eclipse.persistence.logging.SessionLog.SQL;
 
 public class Classes_DAO {
    
-    static String urlBanco = "jdbc:mysql://localhost:3006/ParkSys";
+    static String urlBanco = "jdbc:mysql://localhost/ParkSys";
     static String usuarioBanco = "root";
     static String senhaBanco = "";
     
