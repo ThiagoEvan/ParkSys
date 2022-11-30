@@ -12,8 +12,8 @@ Entrou, Deixou, Voltou, Pagou, Levou
 - [x] BANCO DE DADOS
 - [ ] RELATÓRIO
 - [ ] ARQUIVO DE HELP /  MANUAL DE INSTRUÇÕES (AJUDA)
-- [ ] MENU EM TOPO
-- [ ] RECURSOS VISUAIS
+- [x] MENU EM TOPO
+- [x] RECURSOS VISUAIS
 - [ ] PACOTE DE INSTALAÇÃO
 
 <h3>Referências</h3>
