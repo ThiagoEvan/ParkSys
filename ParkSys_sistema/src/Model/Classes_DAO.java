@@ -42,6 +42,7 @@ public class Classes_DAO {
         return sair;
     }
     
+    
     public static void Inserir(){
 
         placa = TelaAlterBD_GUI.txtPlacaIns.getText();
