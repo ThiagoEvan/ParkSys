@@ -68,24 +68,29 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel1.setText("Placa");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(10, 30, 30, 17);
+        jLabel1.setBounds(10, 30, 30, 18);
         jPanel1.add(txtPlacaIns);
         txtPlacaIns.setBounds(10, 52, 279, 29);
 
         jLabel2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel2.setText("Data de Entrada");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(10, 99, 93, 17);
+        jLabel2.setBounds(10, 99, 93, 18);
 
         jLabel3.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel3.setText("Observações");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 180, 71, 17);
+        jLabel3.setBounds(10, 180, 71, 18);
 
         jButton1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jButton1.setText("ADICIONAR REGISTRO");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1);
-        jButton1.setBounds(20, 290, 260, 39);
+        jButton1.setBounds(20, 280, 260, 36);
 
         txtObsIns.setColumns(20);
         txtObsIns.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
@@ -106,7 +111,7 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel4.setText("Horário de Entrada");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(175, 99, 108, 17);
+        jLabel4.setBounds(175, 99, 108, 18);
 
         try {
             txtHoraIns.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##:##")));
@@ -162,9 +167,19 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jButton5.setText("ALTERAR REGISTRO");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton8.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         jButton8.setText("DELETAR");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel9.setText("Horário de Entrada");
@@ -189,7 +204,7 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnBuscarCupom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))
                         .addGap(19, 19, 19)
                         .addComponent(btnDeletarCupom, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -215,10 +230,10 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
                                 .addGap(23, 23, 23)))
                         .addGap(27, 27, 27)))
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,6 +300,18 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
     private void btnDeletarCupomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarCupomActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeletarCupomActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
