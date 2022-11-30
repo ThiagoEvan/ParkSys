@@ -69,6 +69,12 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
         jLabel1.setText("Placa");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(10, 30, 30, 18);
+
+        txtPlacaIns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPlacaInsActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtPlacaIns);
         txtPlacaIns.setBounds(10, 52, 279, 29);
 
@@ -302,7 +308,7 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeletarCupomActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Model.Classes_DAO.Inserir();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -312,6 +318,10 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void txtPlacaInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlacaInsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPlacaInsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -356,8 +366,8 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton8;
-    private javax.swing.JFormattedTextField jFormattedTextField4;
-    private javax.swing.JFormattedTextField jFormattedTextField5;
+    public static javax.swing.JFormattedTextField jFormattedTextField4;
+    public static javax.swing.JFormattedTextField jFormattedTextField5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -372,12 +382,12 @@ public class TelaAlterBD_GUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField txtCupom;
-    private javax.swing.JFormattedTextField txtDataIns;
-    private javax.swing.JFormattedTextField txtHoraIns;
-    private javax.swing.JTextArea txtObsAlt;
-    private javax.swing.JTextArea txtObsIns;
-    private javax.swing.JTextField txtPlacaAlt;
-    private javax.swing.JTextField txtPlacaIns;
+    public static javax.swing.JTextField txtCupom;
+    public static javax.swing.JFormattedTextField txtDataIns;
+    public static javax.swing.JFormattedTextField txtHoraIns;
+    public static javax.swing.JTextArea txtObsAlt;
+    public static javax.swing.JTextArea txtObsIns;
+    public static javax.swing.JTextField txtPlacaAlt;
+    public static javax.swing.JTextField txtPlacaIns;
     // End of variables declaration//GEN-END:variables
 }

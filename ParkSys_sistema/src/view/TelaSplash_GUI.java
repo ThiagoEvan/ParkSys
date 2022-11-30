@@ -4,15 +4,6 @@ import static java.lang.Thread.sleep;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-/**
- *
- * @author Alunos
- */
 public class TelaSplash_GUI extends javax.swing.JFrame {
 
     /**
@@ -28,7 +19,7 @@ public class TelaSplash_GUI extends javax.swing.JFrame {
              
                 for(int i=0;i<101;i++){
                     try {
-                        sleep(40);
+                        sleep(1);
                         prgBar.setValue(i);
                         lblStatus.setText(String.valueOf(i)+"%");   
                     } catch (InterruptedException ex) {
