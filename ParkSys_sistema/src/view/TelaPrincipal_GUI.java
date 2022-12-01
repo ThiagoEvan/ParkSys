@@ -4,6 +4,10 @@
  */
 package view;
 
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Alunos
@@ -255,7 +259,11 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_menuAjudaActionPerformed
 
     private void menuCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCaixaActionPerformed
-        Model.Classes_DAO.Pagar();
+        try {
+            Model.Classes_DAO.Pagar();
+        } catch (ParseException ex) {
+            Logger.getLogger(TelaPrincipal_GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_menuCaixaActionPerformed
 
     private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
