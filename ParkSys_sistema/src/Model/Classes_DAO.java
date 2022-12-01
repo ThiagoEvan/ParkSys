@@ -21,10 +21,15 @@ import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import view.*;
 import java.sql.*;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static org.eclipse.persistence.logging.SessionLog.SQL;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;
 
 public class Classes_DAO {
    
@@ -37,6 +42,9 @@ public class Classes_DAO {
     static String data;
     static String hora;
     static String obs;
+    static double taxa = 4.5;
+    static Date d1 = null;
+    static Date d2 = null;
     
     public static int Close_window(){
         Object[] options = {"Sim", "Não"};
@@ -67,8 +75,8 @@ public class Classes_DAO {
             String sql = "INSERT INTO vagas(placa,observação,hr_entrada) values('"+placa+"','"+obs+"','"+data + " " + hora+"');";
            
             try {
-              PreparedStatement insert = (PreparedStatement) con.prepareStatement(sql);
-               insert.execute();
+                PreparedStatement insert = (PreparedStatement) con.prepareStatement(sql);
+                insert.execute();
             
                 TelaAlterBD_GUI.txtPlacaIns.setText("");
                 TelaAlterBD_GUI.txtObsIns.setText("");
@@ -100,7 +108,7 @@ public class Classes_DAO {
                 }
 
                 
-                String sql = "SELECT placa,observação,hr, cli_tel FROM cliente where cupom = "+cupom;
+                String sql = "SELECT placa,observação,hr_entrada FROM vagas where cupom = "+cupom+";";
                 
                 Statement stm = (Statement) con.createStatement();
                 try{ 
@@ -112,16 +120,13 @@ public class Classes_DAO {
                     while (rs.next()) {  // Criando variaveis que receberão os valores do banco de dados
                         String placa = rs.getString("placa");
                         String obs = rs.getString("observação");
-                        String hr_bruta = rs.getString("hr_entrada");
+                        String data = rs.getString("hr_entrada");
                         
-                        LongBuffer hr_entrada = LongBuffer.allocate(hr_bruta);
-                        String data = hr_entrada.s();
-
                         i++;
-
-                        TelaAlterBD_GUI.txtPlacaAlt.setText(String.valueOf(placa));
+                        
+                        TelaAlterBD_GUI.txtPlacaAlt1.setText(String.valueOf(placa));
                         TelaAlterBD_GUI.txtObsAlt.setText(String.valueOf(obs));
-                        txt.setText(String.valueOf(hora));
+                        TelaAlterBD_GUI.txtData_Hora.setText(String.valueOf(data));
 
                     }
 
@@ -145,5 +150,121 @@ public class Classes_DAO {
             JOptionPane.showMessageDialog(null,"Digite o código corretamante","ERRO",0);
             TelaAlterBD_GUI.txtCupom.setText("");
         }
+    }
+    
+    public static void Deletar(){
+        
+        cupom = Integer.parseInt(TelaAlterBD_GUI.txtCupom.getText());
+
+        controller.Conexao_DB.carregaDriver();
+        
+        try{
+        
+            Connection con = null;
+
+            try {
+                con = (Connection) DriverManager.getConnection(urlBanco, usuarioBanco, senhaBanco);
+            } catch (SQLException ex) {
+                Logger.getLogger(Classes_DAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            String sql = "DELETE FROM vagas WHERE cupom = "+cupom+";";
+           
+            try {
+              PreparedStatement insert = (PreparedStatement) con.prepareStatement(sql);
+               insert.execute();
+            
+                TelaAlterBD_GUI.txtPlacaIns.setText("");
+                TelaAlterBD_GUI.txtObsIns.setText("");
+                TelaAlterBD_GUI.txtHoraIns.setText("");
+                TelaAlterBD_GUI.txtDataIns.setText("");
+                
+                JOptionPane.showMessageDialog(null,"Registro deletado com sucesso");
+
+            } catch (SQLException ex) {
+                Logger.getLogger(Classes_DAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }catch(NumberFormatException erro){
+                // Tratamento de erro caso o usuario não digite o telefone corretamente
+                JOptionPane.showMessageDialog(null,"Digite os dados corretamente","ERRO",0);
+                
+        }
+    }
+    
+    public static void Pagar() throws ParseException{
+        try{
+            cupom = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite o cupom"));
+            Conexao_DB.carregaDriver(); 
+            
+            try {
+                Connection con = null;
+
+                try {
+                    con = (Connection) DriverManager.getConnection(urlBanco, usuarioBanco, senhaBanco);
+                } catch (SQLException ex) {
+                    Logger.getLogger(Classes_DAO.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                
+                String sql = "SELECT hr_entrada FROM vagas where cupom = "+cupom+";";
+                
+                Statement stm = (Statement) con.createStatement();
+                try{ 
+                    ResultSet rs = stm.executeQuery(sql);
+
+                
+                    int i=0; // Variavel utilizada para saber se ha dados cadastrados
+
+                    while (rs.next()) {  // Criando variaveis que receberão os valores do banco de dados
+                        
+                        String data = rs.getString("hr_entrada");
+                        
+                        i++;
+                    }
+                } catch (Exception ex) { // Consulta mal sucedida
+                    JOptionPane.showMessageDialog(null,"\nErro ao consultar!","ERRO",0);
+                }
+
+            } catch (SQLException ex) {
+                // Conexão com servidor mal sucedida
+                JOptionPane.showMessageDialog(null,"Erro ao conectar com o servidor","ERRO!",0);
+            }
+
+        }catch(NumberFormatException erro){
+            // Código fora do formato
+            JOptionPane.showMessageDialog(null,"Digite o código corretamante","ERRO",0);
+            
+        }
+            
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now(); 
+        String datnow = String.valueOf(dtf);
+        String datbef = String.valueOf(data);
+        
+        String sql = "INSERT INTO vagas(hr_saida) values('"+dtf+"') WHERE cupom = "+cupom+";";
+           
+        try {
+            Connection con = null;
+
+            PreparedStatement insert = (PreparedStatement) con.prepareStatement(sql);
+            insert.execute();
+        } catch (SQLException ex) {
+            Logger.getLogger(Classes_DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        SimpleDateFormat format = new SimpleDateFormat("yy/MM/dd HH:mm:ss");
+        
+        d1 = format.parse(datnow);
+        d2 = format.parse(datbef);
+        
+        long diff = d1.getTime() - d2.getTime();
+        
+        long diffHours = diff / (60 * 60 * 1000);
+        
+        double preco_pagar = ( diffHours * taxa ) +taxa;
+        
+        JOptionPane.showMessageDialog(null, "O preço a pagar é de:"+preco_pagar);
     }
 }

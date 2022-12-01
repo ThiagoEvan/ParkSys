@@ -43,8 +43,8 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
         menuAdd = new javax.swing.JMenuItem();
         menuEdit = new javax.swing.JMenuItem();
         menuDel = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
         menuCaixa = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
         menuExtrt = new javax.swing.JMenuItem();
 
         jMenu3.setText("jMenu3");
@@ -179,21 +179,21 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
         });
         jMenu2.add(menuDel);
 
-        jMenuBar1.add(jMenu2);
-
-        jMenu4.setText("Financeiro");
-        jMenu4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-
         menuCaixa.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         menuCaixa.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         menuCaixa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/source/pay.png"))); // NOI18N
-        menuCaixa.setText("Caixa");
+        menuCaixa.setText("Pagar Vaga");
         menuCaixa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuCaixaActionPerformed(evt);
             }
         });
-        jMenu4.add(menuCaixa);
+        jMenu2.add(menuCaixa);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu4.setText("Financeiro");
+        jMenu4.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
 
         menuExtrt.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, 0));
         menuExtrt.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
@@ -255,7 +255,7 @@ public class TelaPrincipal_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_menuAjudaActionPerformed
 
     private void menuCaixaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCaixaActionPerformed
-        // TODO add your handling code here:
+        Model.Classes_DAO.Pagar();
     }//GEN-LAST:event_menuCaixaActionPerformed
 
     private void menuLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuLogoutActionPerformed
